@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/node'
+require 'pry'
 
 class NodeTest < Minitest::Test
 
@@ -14,12 +15,10 @@ class NodeTest < Minitest::Test
     assert_equal "a", node.value
   end
 
-  def test_it_can_have_children
+  def test_it_can_add_children
     node_1 = Node.new("a")
-    node_2 = Node.new("b")
-    node_1.give_child(node_2)
-    expected = b:node_2
-    assert_equal expected, node_1.children
+    node_1.add_child("b")
+    assert_equal "b", node_1.children["b"].value
   end
 
 end
