@@ -10,4 +10,9 @@ class Node
     @children = {}
   end
 
+  def add_child(char)
+    node = Node.new(char)
+    @children[char] = node
+  end
+
 end
