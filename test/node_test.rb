@@ -14,4 +14,12 @@ class NodeTest < Minitest::Test
     assert_equal "a", node.value
   end
 
+  def test_it_can_have_children
+    node_1 = Node.new("a")
+    node_2 = Node.new("b")
+    node_1.give_child(node_2)
+    expected = b:node_2
+    assert_equal expected, node_1.children
+  end
+
 end
