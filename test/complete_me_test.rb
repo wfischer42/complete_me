@@ -41,26 +41,49 @@ class CompleteMeTest < Minitest::Test
     assert_equal 3, completion.count
   end
 
-  def test_it_can_suggest_words
-    skip
+  def test_it_can_list_lexicon
     completion = CompleteMe.new
     completion.insert("pizza")
-    suggestion = completion.suggest("piz")
+    completion.insert("pizzaria")
+    completion.insert("dog")
 
-    assert_equal ["pizza"], suggestion
+    lexicon = completion.lexicon
+    assert lexicon.include?("pizza")
+    assert lexicon.include?("pizzaria")
+    assert lexicon.include?("dog")
+    refute lexicon.include?("cat")
+  end
+
+  def test_it_can_suggest_words
+
+    completion = CompleteMe.new
+    completion.insert("pizza")
+    completion.insert("pize")
+    suggestion = completion.suggest("piz")
+# ["pize", "pizza", "pizzeria", "pizzicato", "pizzle"]
+    assert suggestion.include?("pize")
+    assert suggestion.include?("pizza")
+  end
+
+  def test_it_deosnt_suggest_unrelated_words
+    completion = CompleteMe.new
+    completion.insert("pizza")
+    completion.insert("pize")
+    completion.insert("pokemon")
+    suggestion = completion.suggest("piz")
+    refute suggestion.include?("pokemon")
   end
 
   def test_can_populate_from_a_dictionary
-    skip
     completion = CompleteMe.new
     dictionary = File.read("/usr/share/dict/words")
     completion.populate(dictionary)
 
     assert_equal 235886, completion.count
+    assert completion.include?("tissue")
   end
 
   def test_can_suggest_many_words_after_population
-    skip
     completion = CompleteMe.new
     dictionary = File.read("/usr/share/dict/words")
     completion.populate(dictionary)
