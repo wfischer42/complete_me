@@ -5,7 +5,6 @@ class CompleteMe
   end
 
   def insert(word)
-    #Traverse down the trie, making new nodes as needed
     node = @root
     word.chars.each do |char|
       child = node.add_child(char)
@@ -20,15 +19,26 @@ class CompleteMe
   end
 
   def populate(dictionary)
-    #Call insert over each newline of the dictionary
-    File.readlines(dictionary).each do |line|
-      insert(line)
+    words = dictionary.split("\n")
+    words.each do |word|
+      insert(word)
     end
   end
 
   def suggest(word)
-    #Travese down the trie to the given word/prefix. Collect and return a list of the
-    #closest nodes
+    node = @root
+    word.chars.each do |char|
+      if node.children[char] != nil
+        node = node.children[char]
+      else
+        break
+      end
+    end
+    return node.decendant_words
+  end
+
+  def lexicon
+    @root.decendant_words
   end
 
   def include?(word)

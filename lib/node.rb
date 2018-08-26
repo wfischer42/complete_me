@@ -35,4 +35,16 @@ class Node
     return node_count
   end
 
+  def decendant_words
+    words = []
+    children.each do |char, child|
+      if child.word != nil
+        words << child.word
+      end
+      words += child.decendant_words
+    end
+    return words
+
+  end
+
 end
