@@ -75,6 +75,7 @@ class CompleteMeTest < Minitest::Test
   end
 
   def test_can_populate_from_a_dictionary
+    skip
     completion = CompleteMe.new
     dictionary = File.read("/usr/share/dict/words")
     completion.populate(dictionary)
@@ -84,6 +85,7 @@ class CompleteMeTest < Minitest::Test
   end
 
   def test_can_suggest_many_words_after_population
+    skip
     completion = CompleteMe.new
     dictionary = File.read("/usr/share/dict/words")
     completion.populate(dictionary)
@@ -94,6 +96,7 @@ class CompleteMeTest < Minitest::Test
   end
 
   def test_can_weight_words_based_on_selction
+    skip
     completion = CompleteMe.new
     dictionary = File.read("/usr/share/dict/words")
     completion.populate(dictionary)
@@ -104,6 +107,7 @@ class CompleteMeTest < Minitest::Test
   end
 
   def test_weights_are_independant
+    skip
     completion = CompleteMe.new
     dictionary = File.read("/usr/share/dict/words")
     completion.populate(dictionary)
@@ -117,6 +121,44 @@ class CompleteMeTest < Minitest::Test
     assert_equal "pizzeria", suggestion_1[0]
     assert_equal "pillow", suggestion_2[0]
     assert_equal "pizza", suggestion_3[0]
+  end
+
+  def test_word_is_unflagged_when_deleted
+    completion = CompleteMe.new
+    completion.insert("pizza")
+    completion.insert("pize")
+    completion.insert("pokemon")
+    assert completion.include?("pokemon")
+    completion.delete("pokemon")
+    refute completion.include?("pokemon")
+  end
+
+  def test_trie_trims_unused_nodes_on_deletion
+    completion = CompleteMe.new
+    completion.insert("stud")
+    completion.insert("student")
+    completion.insert("students")
+    completion.insert("studio")
+    term = completion.terminal_node("stud")
+    assert_equal 2 ,term.children.size
+
+    completion.delete("student")
+    completion.delete("students")
+    assert completion.include?("stud")
+    assert_equal 1 ,term.children.size
+
+  end
+
+  def test_trie_doesnt_overtrim_on_deletion
+    completion = CompleteMe.new
+    completion.insert("stud")
+    completion.insert("student")
+    completion.insert("students")
+    completion.insert("studio")
+
+    completion.delete("student")
+    assert completion.include?("students")
+    refute completion.include?("student")
   end
 
 end

@@ -71,4 +71,8 @@ class CompleteMe
     node.add_weight(snippit)
   end
 
+  def delete(word)
+    terminal_node(word).remove_word
+  end
+
 end
