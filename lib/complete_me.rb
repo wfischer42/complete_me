@@ -11,11 +11,12 @@ class CompleteMe
       child = node.add_child(char)
       node = child
     end
-    node.word = true
+    node.word = word
+    node
   end
 
   def count
-
+    count = @root.count
   end
 
   def populate(dictionary)
@@ -28,6 +29,16 @@ class CompleteMe
   def suggest(word)
     #Travese down the trie to the given word/prefix. Collect and return a list of the
     #closest nodes
+  end
+
+  def include?(word)
+    node = @root
+    word.chars.each do |char|
+      node = node.children[char]
+      return false if node == nil
+      return true if word == node.word
+    end
+    return false
   end
 
 end
