@@ -21,4 +21,16 @@ class NodeTest < Minitest::Test
     assert_equal "b", node_1.children["b"].value
   end
 
+  def test_nodes_have_parents
+    node_1 = Node.new("a")
+    node_2 = node_1.add_child("b")
+    assert_equal node_1, node_2.parent
+  end
+
+  def test_node_can_have_weight
+    node_1 = Node.new("a")
+    node_1.add_weight("piz")
+    assert_equal 
+  end
+
 end

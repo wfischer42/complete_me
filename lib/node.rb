@@ -3,22 +3,24 @@ class Node
   attr_accessor   :word,
                   :weights
   attr_reader     :value,
-                  :children
+                  :children,
+                  :parent
 
-  def initialize(value)
+  def initialize(value, parent = nil)
     @value = value
     @word = nil
     @children = {}
     @weights = Hash.new(0)
+    @parent = parent
   end
 
   def add_child(char)
     if @children.has_key?(char)
       return @children[char]
     else
-      node = Node.new(char)
+      node = Node.new(char,self)
       @children[char] = node
-      node
+      return node
     end
   end
 
@@ -52,6 +54,20 @@ class Node
 
   def add_weight(snippit)
       @weights[snippit] += 1
+  end
+
+  def remove_word
+    @word = nil
+    @weights = Hash.new(0)
+    trim
+  end
+
+  def trim
+    if @children.size == 0 && @word == nil
+      @parent.children.delete(@value)
+      @parent.trim
+      #TODO garbage collection?
+    end
   end
 
 end
