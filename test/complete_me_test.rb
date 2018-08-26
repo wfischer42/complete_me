@@ -25,7 +25,7 @@ class CompleteMeTest < Minitest::Test
 
   def test_detect_if_word_is_absent
     completion = CompleteMe.new
-    completion.insert("pizzaria")
+    completion.insert("pizzeria")
     refute completion.include?("pizza")
     refute completion.include?("4i2364876")
   end
@@ -44,12 +44,12 @@ class CompleteMeTest < Minitest::Test
   def test_it_can_list_lexicon
     completion = CompleteMe.new
     completion.insert("pizza")
-    completion.insert("pizzaria")
+    completion.insert("pizzeria")
     completion.insert("dog")
 
     lexicon = completion.lexicon
     assert lexicon.include?("pizza")
-    assert lexicon.include?("pizzaria")
+    assert lexicon.include?("pizzeria")
     assert lexicon.include?("dog")
     refute lexicon.include?("cat")
   end
@@ -91,6 +91,32 @@ class CompleteMeTest < Minitest::Test
     expected = ["pize", "pizza", "pizzeria", "pizzicato", "pizzle"]
 
     assert_equal expected, suggestion
+  end
+
+  def test_can_weight_words_based_on_selction
+    completion = CompleteMe.new
+    dictionary = File.read("/usr/share/dict/words")
+    completion.populate(dictionary)
+    completion.select("piz", "pizzeria")
+    suggestion = completion.suggest("piz")
+    assert_equal "pizzeria", suggestion[0]
+
+  end
+
+  def test_weights_are_independant
+    completion = CompleteMe.new
+    dictionary = File.read("/usr/share/dict/words")
+    completion.populate(dictionary)
+    completion.select("piz", "pizzeria")
+    completion.select("pi", "pillow")
+    completion.select("pizz", "pizza")
+    suggestion_1 = completion.suggest("piz")
+    suggestion_2= completion.suggest("pi")
+    suggestion_3 = completion.suggest("pizz")
+
+    assert_equal "pizzeria", suggestion_1[0]
+    assert_equal "pillow", suggestion_2[0]
+    assert_equal "pizza", suggestion_3[0]
   end
 
 end

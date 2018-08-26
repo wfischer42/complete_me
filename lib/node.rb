@@ -1,6 +1,7 @@
 class Node
 
-  attr_accessor   :word
+  attr_accessor   :word,
+                  :weights
   attr_reader     :value,
                   :children
 
@@ -8,6 +9,7 @@ class Node
     @value = value
     @word = nil
     @children = {}
+    @weights = Hash.new(0)
   end
 
   def add_child(char)
@@ -35,16 +37,21 @@ class Node
     return node_count
   end
 
-  def decendant_words
-    words = []
+  def descendant_words(snippit = "")
+    words = {}
     children.each do |char, child|
       if child.word != nil
-        words << child.word
+        words[child.word] = child.weights[snippit]
       end
-      words += child.decendant_words
+      d_words = child.descendant_words(snippit)
+      words.merge!(d_words)
     end
     return words
 
+  end
+
+  def add_weight(snippit)
+      @weights[snippit] += 1
   end
 
 end

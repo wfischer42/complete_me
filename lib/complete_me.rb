@@ -1,3 +1,4 @@
+require 'pry'
 class CompleteMe
 
   def initialize
@@ -14,8 +15,20 @@ class CompleteMe
     node
   end
 
+  def terminal_node(word)
+    node = @root
+    word.chars.each do |char|
+      if node.children[char] != nil
+        node = node.children[char]
+      else
+        break
+      end
+    end
+    return node
+  end
+
   def count
-    count = @root.count
+    @root.count
   end
 
   def populate(dictionary)
@@ -25,20 +38,22 @@ class CompleteMe
     end
   end
 
-  def suggest(word)
-    node = @root
-    word.chars.each do |char|
-      if node.children[char] != nil
-        node = node.children[char]
-      else
-        break
-      end
-    end
-    return node.decendant_words
+  def suggest(snippit)
+    node = terminal_node(snippit)
+    suggestions = node.descendant_words(snippit)
+    return sort_suggestions(suggestions)
+  end
+
+  def sort_suggestions(words)
+    require 'pry'
+    sorted = words.sort_by do |word, weight|
+      weight * -1
+    end.to_h
+    return sorted.keys
   end
 
   def lexicon
-    @root.decendant_words
+    @root.descendant_words
   end
 
   def include?(word)
@@ -49,6 +64,11 @@ class CompleteMe
       return true if word == node.word
     end
     return false
+  end
+
+  def select(snippit, word)
+    node = terminal_node(word)
+    node.add_weight(snippit)
   end
 
 end
