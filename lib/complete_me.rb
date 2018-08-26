@@ -1,7 +1,17 @@
 class CompleteMe
 
+  def initialize
+    @root = Node.new(nil)
+  end
+
   def insert(word)
     #Traverse down the trie, making new nodes as needed
+    node = @root
+    word.chars.each do |char|
+      child = node.add_child(char)
+      node = child
+    end
+    node.word = true
   end
 
   def count
