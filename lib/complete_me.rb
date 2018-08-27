@@ -23,13 +23,12 @@ class CompleteMe
     word.tr(".", "")
   end
 
-  def terminal_node(word)
-    node = @root
+  def terminal_node(word, node = @root)
     word.chars.each do |char|
       if node.children[char] != nil
         node = node.children[char]
       else
-        break
+        return Node.new(nil)
       end
     end
     return node
@@ -49,17 +48,33 @@ class CompleteMe
 
   def populate_addresses(file)
     # TODO: Handle bad file input
-    addresses = []
-    CSV.foreach(file) do |row|
-      insert(row[-1])
+    CSV.foreach(file, :headers => true) do |row|
+      insert(row['FULL_ADDRESS'])
     end
   end
 
+  # Takes in a portion of a word as 'snippit'
+  # Returns an array of words that start with 'snippit' sorted by their weights for the given 'snippit'
   def suggest(snippit)
     node = terminal_node(snippit)
     suggestions = node.descendant_words(snippit)
     return sort_suggestions(suggestions)
   end
+
+  def suggest_all(snippit)
+    first_char = snippit[0]
+    remaining_snippit = snippit.slice(1..-1)
+    nodes = all_nodes_by_value(first_char)
+
+    all_suggestions = {}
+    nodes.each do |starting_node|
+      eow_node = terminal_node(remaining_snippit, starting_node)
+      suggestions = eow_node.descendant_words(snippit)
+      all_suggestions.merge!(suggestions)
+    end
+    return sort_suggestions(all_suggestions)
+  end
+
 
   def sort_suggestions(words)
     require 'pry'
@@ -81,6 +96,10 @@ class CompleteMe
       return true if word == node.word
     end
     return false
+  end
+
+  def all_nodes_by_value(char, depth = 100)
+    @root.descendant_nodes_by_value(char, depth)
   end
 
   def select(snippit, word)
