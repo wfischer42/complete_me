@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/complete_me'
@@ -13,7 +16,7 @@ class CompleteMeTest < Minitest::Test
     skip
     completion = CompleteMe.new
     completion.insert("pizza")
-    
+
     assert_equal 1, completion.count
   end
 
