@@ -1,4 +1,6 @@
 require 'pry'
+require 'csv'
+
 class CompleteMe
 
   def initialize
@@ -7,12 +9,18 @@ class CompleteMe
 
   def insert(word)
     node = @root
+    # word = normalize(word)
     word.chars.each do |char|
       child = node.add_child(char)
       node = child
     end
     node.word = word
     node
+  end
+
+  def normalize(word)
+    word.downcase!
+    word.tr(".", "")
   end
 
   def terminal_node(word)
@@ -32,9 +40,18 @@ class CompleteMe
   end
 
   def populate(dictionary)
+    # TODO: Merge populate methods to distinguish between text & csv inputs
     words = dictionary.split("\n")
     words.each do |word|
       insert(word)
+    end
+  end
+
+  def populate_addresses(file)
+    # TODO: Handle bad file input
+    addresses = []
+    CSV.foreach(file) do |row|
+      insert(row[-1])
     end
   end
 

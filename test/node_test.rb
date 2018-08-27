@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/node'
@@ -28,9 +31,11 @@ class NodeTest < Minitest::Test
   end
 
   def test_node_can_have_weight
+    skip
     node_1 = Node.new("a")
     node_1.add_weight("piz")
-    assert_equal 
+    #TODO: Finish Node Tests
+    assert_equal
   end
 
 end
