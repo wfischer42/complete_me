@@ -1,15 +1,28 @@
 require 'simplecov'
 SimpleCov.start
 
+# require 'test/test_helper'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/complete_me'
 require './lib/node'
 
 class CompleteMeTest < Minitest::Test
+  extend Minitest::Spec::DSL
+  # TODO: Consolidate test setup & clean up tests
+  # TODO: Ensure full test coverage
+
+  completion = CompleteMe.new
+  dictionary = File.read("/usr/share/dict/words")
+  completion.populate(dictionary)
+  @@dictionary_completion = completion
+
+  completion = CompleteMe.new
+  completion.populate_addresses("./data/addresses.csv")
+  @@address_completion = completion
+
   def test_it_exists
     completion = CompleteMe.new
-
     assert_instance_of CompleteMe, completion
   end
 
@@ -63,7 +76,7 @@ class CompleteMeTest < Minitest::Test
     completion.insert("pizza")
     completion.insert("pize")
     suggestion = completion.suggest("piz")
-# ["pize", "pizza", "pizzeria", "pizzicato", "pizzle"]
+
     assert suggestion.include?("pize")
     assert suggestion.include?("pizza")
   end
@@ -78,20 +91,16 @@ class CompleteMeTest < Minitest::Test
   end
 
   def test_can_populate_from_a_dictionary
-    skip
-    completion = CompleteMe.new
-    dictionary = File.read("/usr/share/dict/words")
-    completion.populate(dictionary)
+    # skip
+    completion = @@dictionary_completion
 
     assert_equal 235886, completion.count
     assert completion.include?("tissue")
   end
 
   def test_can_suggest_many_words_after_population
-    skip
-    completion = CompleteMe.new
-    dictionary = File.read("/usr/share/dict/words")
-    completion.populate(dictionary)
+    # skip
+    completion = @@dictionary_completion
     suggestion = completion.suggest("piz")
     expected = ["pize", "pizza", "pizzeria", "pizzicato", "pizzle"]
 
@@ -99,10 +108,8 @@ class CompleteMeTest < Minitest::Test
   end
 
   def test_can_weight_words_based_on_selction
-    skip
-    completion = CompleteMe.new
-    dictionary = File.read("/usr/share/dict/words")
-    completion.populate(dictionary)
+    # skip
+    completion = @@dictionary_completion
     completion.select("piz", "pizzeria")
     suggestion = completion.suggest("piz")
     assert_equal "pizzeria", suggestion[0]
@@ -110,10 +117,8 @@ class CompleteMeTest < Minitest::Test
   end
 
   def test_weights_are_independant
-    skip
-    completion = CompleteMe.new
-    dictionary = File.read("/usr/share/dict/words")
-    completion.populate(dictionary)
+    # skip
+    completion = @@dictionary_completion
     completion.select("piz", "pizzeria")
     completion.select("pi", "pillow")
     completion.select("pizz", "pizza")
@@ -164,4 +169,36 @@ class CompleteMeTest < Minitest::Test
     refute completion.include?("student")
   end
 
+  def test_it_can_read_in_addresses
+    # skip
+    # address_completion = CompleteMe.new
+    # address_completion.populate_addresses("./data/addresses.csv")
+    # binding.pry
+    completion = @@address_completion
+    assert_equal 313416, completion.count
+  end
+
+  def test_it_can_suggest_addresses
+    # skip
+    completion = @@address_completion
+    # address_completion = CompleteMe.new
+    # address_completion.populate_addresses("./data/addresses.csv")
+    suggestion = completion.suggest("1350 N")
+
+    assert suggestion.include?("1350 N Speer Blvd Unit 422")
+  end
+
+  def test_it_can_update_address_suggestions_from_selection
+    # skip
+    # address_completion = CompleteMe.new
+    # address_completion.populate_addresses("./data/addresses.csv")
+
+    completion = @@address_completion
+    suggestion = completion.suggest("1350 N")
+    assert_equal "1350 N Elm St", suggestion[0]
+
+    completion.select("1350 N", "1350 N Josephine St Apt 106")
+    suggestion = completion.suggest("1350 N")
+    assert_equal "1350 N Josephine St Apt 106", suggestion[0]
+  end
 end
