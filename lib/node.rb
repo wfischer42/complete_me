@@ -24,9 +24,6 @@ class Node
     end
   end
 
-  def child(char)
-    return @children
-  end
 
   def count
     node_count = 0
@@ -39,8 +36,14 @@ class Node
     return node_count
   end
 
+  # Called -on- the last node of the 'snippit'
+  # Takes in the snippit
+  # Returns a hash of all words that descend from that node and their respective weights for the snippit
   def descendant_words(snippit = "")
     words = {}
+    if @word != nil && @word != snippit
+      words[@word] = @weights[snippit]
+    end
     children.each do |char, child|
       if child.word != nil
         words[child.word] = child.weights[snippit]
@@ -49,7 +52,6 @@ class Node
       words.merge!(d_words)
     end
     return words
-
   end
 
   def add_weight(snippit)
@@ -70,4 +72,16 @@ class Node
     end
   end
 
+  def descendant_nodes_by_value(char, depth)
+    nodes = []
+    if depth > 0
+      @children.each do |child_char, child_node|
+        if child_char == char
+          nodes << child_node
+        end
+        nodes += child_node.descendant_nodes_by_value(char, depth - 1)
+      end
+    end
+    return nodes
+  end
 end
