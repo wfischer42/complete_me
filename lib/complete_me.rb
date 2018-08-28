@@ -18,10 +18,10 @@ class CompleteMe
     node
   end
 
-  def normalize(word)
-    word.downcase!
-    word.tr(".", "")
-  end
+  # def normalize(word)
+  #   word.downcase!
+  #   word.tr(".", "")
+  # end
 
   def terminal_node(word, node = @root)
     word.chars.each do |char|
@@ -53,15 +53,13 @@ class CompleteMe
     end
   end
 
-  # Takes in a portion of a word as 'snippit'
-  # Returns an array of words that start with 'snippit' sorted by their weights for the given 'snippit'
-  def suggest(snippit)
-    node = terminal_node(snippit)
-    suggestions = node.descendant_words(snippit)
-    return sort_suggestions(suggestions)
-  end
+  # def suggest_from_beginning(snippit)
+  #   node = terminal_node(snippit)
+  #   suggestions = node.descendant_words(snippit)
+  #   return sort_suggestions(suggestions)
+  # end
 
-  def suggest_all(snippit)
+  def suggest(snippit)
     first_char = snippit[0]
     remaining_snippit = snippit.slice(1..-1)
     nodes = all_nodes_by_value(first_char)
@@ -85,7 +83,7 @@ class CompleteMe
   end
 
   def lexicon
-    @root.descendant_words
+    @root.descendant_words.keys
   end
 
   def include?(word)
