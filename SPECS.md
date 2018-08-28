@@ -1,4 +1,4 @@
-CompleteMe
+Trie
 ==========
 
 Learning Goals
@@ -9,14 +9,14 @@ Learning Goals
 -   Applying Enumerable techniques in a real context
 -   Reading text from and writing text to files
 
-CompleteMe
+Trie
 ----------
 
 Everyone in today's smartphone-saturated world has had their share of interactions with textual "autocomplete." You may have sometimes even wondered if autocomplete is worth the trouble, given the ridiculous completions it sometimes attempts.
 
 But how would you actually make an autocomplete system?
 
-In this project, CompleteMe, we'll be exploring this idea by a simple textual autocomplete system. Perhaps in the process we will develop some sympathy for the developers who built the seemingly incompetent systems on our phones...
+In this project, Trie, we'll be exploring this idea by a simple textual autocomplete system. Perhaps in the process we will develop some sympathy for the developers who built the seemingly incompetent systems on our phones...
 
 ### Data Structure -- Introduction to Tries
 
@@ -66,7 +66,7 @@ We'll expect to interact with your completion project from an interactive pry se
 # We are not concerned about the return values of methods unless explicitly indicated below.
 require "./lib/complete_me"
 
-completion = CompleteMe.new
+completion = Trie.new
 
 completion.insert("pizza")
 
@@ -104,7 +104,7 @@ Here's what that interaction model should look like:
 ```
 require "./lib/complete_me"
 
-completion = CompleteMe.new
+completion = Trie.new
 
 dictionary = File.read("/usr/share/dict/words")
 
@@ -129,7 +129,7 @@ That is, we want to make sure that when `select`ing a given word, that selectio
 ```
 require "./lib/complete_me"
 
-completion = CompleteMe.new
+completion = Trie.new
 
 dictionary = File.read("/usr/share/dict/words")
 

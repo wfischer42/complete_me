@@ -1,7 +1,7 @@
 require 'pry'
 require 'csv'
 
-class CompleteMe
+class Trie
 
   def initialize
     @root = Node.new(nil)
@@ -23,7 +23,7 @@ class CompleteMe
   #   word.tr(".", "")
   # end
 
-  def terminal_node(word, node = @root)
+  def last_node_of_snippit(word, node = @root)
     word.chars.each do |char|
       if node.children[char] != nil
         node = node.children[char]
@@ -54,7 +54,7 @@ class CompleteMe
   end
 
   # def suggest_from_beginning(snippit)
-  #   node = terminal_node(snippit)
+  #   node = last_node_of_snippit(snippit)
   #   suggestions = node.descendant_words(snippit)
   #   return sort_suggestions(suggestions)
   # end
@@ -66,8 +66,8 @@ class CompleteMe
 
     all_suggestions = {}
     nodes.each do |starting_node|
-      eow_node = terminal_node(remaining_snippit, starting_node)
-      suggestions = eow_node.descendant_words(snippit)
+      eos_node = last_node_of_snippit(remaining_snippit, starting_node)
+      suggestions = eos_node.descendant_words(snippit)
       all_suggestions.merge!(suggestions)
     end
     return sort_suggestions(all_suggestions)
@@ -96,17 +96,17 @@ class CompleteMe
     return false
   end
 
-  def all_nodes_by_value(char, depth = 100)
-    @root.descendant_nodes_by_value(char, depth)
+  def all_nodes_by_value(char)
+    @root.descendant_nodes_by_value(char)
   end
 
   def select(snippit, word)
-    node = terminal_node(word)
+    node = last_node_of_snippit(word)
     node.add_weight(snippit)
   end
 
   def delete(word)
-    terminal_node(word).remove_word
+    last_node_of_snippit(word).remove_word
   end
 
 end
