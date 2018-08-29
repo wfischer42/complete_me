@@ -1,0 +1,200 @@
+ADDRESS_TYPE,X_COORD,Y_COORD,LATITUDE,LONGITUDE,ADDRESS_NUMBER_PREFIX,ADDRESS_NUMBER,ADDRESS_NUMBER_SUFFIX,PREMODIFIER,PREDIRECTIONAL,STREET_NAME,POSTTYPE,POSTDIRECTIONAL,POSTMODIFIER,BUILDING_TYPE,BUILDING_IDENTIFIER,UNIT_TYPE,UNIT_IDENTIFIER,COMPOSITE_UNIT_TYPE,COMPOSIT_UNIT_IDENTIFIER,FULL_ADDRESS
+L,3176210.0,1668555.0,39.66731425,-104.87405722,None,2679.0,None,None,S,Dayton,Way,None,None,None,None,None,None,None,None,2679 S Dayton Way
+S,3176237.0,1668436.0,39.66698774,-104.87396294,None,2679.0,None,None,S,Dayton,Way,None,None,None,None,Spc,D-1,Spc,D-1,2679 S Dayton Way Spc D-1
+S,3176131.0,1668086.0,39.66602885,-104.87434947,None,2669.0,None,None,S,Dayton,Way,None,None,None,None,Spc,D,Spc,D,2669 S Dayton Way Spc D
+U,3144188.0,1669580.0,39.67067826,-104.9877842,None,2527.0,None,None,S,Broadway,None,None,None,None,None,None,None,None,None,2527 S Broadway
+S,3175959.0,1668375.0,39.6668249,-104.87495208,None,2669.0,None,None,S,Dayton,Way,None,None,None,None,Spc,A-1,Spc,A-1,2669 S Dayton Way Spc A-1
+S,3176083.0,1668724.0,39.66777968,-104.87450523,None,2649.0,None,None,S,Dayton,Way,None,None,None,None,Spc,B-2,Spc,B-2,2649 S Dayton Way Spc B-2
+S,3175920.0,1668566.0,39.66735119,-104.8750883,None,2679.0,None,None,S,Dayton,Way,None,None,None,None,Spc,B-1,Spc,B-1,2679 S Dayton Way Spc B-1
+S,3176280.0,1668224.0,39.66640422,-104.87381527,None,2659.0,None,None,S,Dayton,Way,None,None,None,None,Spc,C,Spc,C,2659 S Dayton Way Spc C
+L,3176021.0,1668412.0,39.66692525,-104.87473208,None,2669.0,None,None,S,Dayton,Way,None,None,None,None,None,None,None,None,2669 S Dayton Way
+S,3175958.0,1669107.0,39.66883475,-104.87493815,None,2649.0,None,None,S,Dayton,Way,None,None,None,None,Spc,A-1,Spc,A-1,2649 S Dayton Way Spc A-1
+S,3128208.0,1682318.0,39.70588177,-105.04432306,None,4341.0,None,None,W,Center,Ave,None,None,Bldg,A,None,None,Bldg,A,4341 W Center Ave Bldg A
+S,3128236.0,1705846.0,39.77047088,-105.04380379,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,205,Unit,205,3860 N Tennyson St Unit 205
+S,3128301.0,1705841.0,39.77045633,-105.04357271,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,509,Unit,509,3860 N Tennyson St Unit 509
+S,3128235.0,1705779.0,39.77028519,-105.04381005,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,502,Unit,502,3860 N Tennyson St Unit 502
+S,3128254.0,1705785.0,39.77030297,-105.04374298,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,301,Unit,301,3860 N Tennyson St Unit 301
+S,3128301.0,1705841.0,39.77045633,-105.04357271,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,210,Unit,210,3860 N Tennyson St Unit 210
+S,3128300.0,1705779.0,39.77028575,-105.04357697,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,213,Unit,213,3860 N Tennyson St Unit 213
+S,3128254.0,1705785.0,39.77030297,-105.04374298,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,201,Unit,201,3860 N Tennyson St Unit 201
+S,3128236.0,1705823.0,39.77040655,-105.0438061,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,304,Unit,304,3860 N Tennyson St Unit 304
+S,3128301.0,1705841.0,39.77045633,-105.04357271,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,409,Unit,409,3860 N Tennyson St Unit 409
+S,3128301.0,1705862.0,39.77051337,-105.04357423,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,209,Unit,209,3860 N Tennyson St Unit 209
+S,3169992.0,1711807.0,39.78616389,-104.89512162,None,4900.0,None,None,N,Trenton,St,None,None,None,None,Unit,329,Unit,329,4900 N Trenton St Unit 329
+S,3128237.0,1705862.0,39.77051278,-105.04379973,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,106,Unit,106,3860 N Tennyson St Unit 106
+S,3128237.0,1705862.0,39.77051278,-105.04379973,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,206,Unit,206,3860 N Tennyson St Unit 206
+S,3128254.0,1705855.0,39.77049549,-105.04374173,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,507,Unit,507,3860 N Tennyson St Unit 507
+S,3128300.0,1705797.0,39.7703345,-105.04357792,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,212,Unit,212,3860 N Tennyson St Unit 212
+S,3128235.0,1705799.0,39.77034026,-105.04380717,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,303,Unit,303,3860 N Tennyson St Unit 303
+S,3128254.0,1705855.0,39.77049549,-105.04374173,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,207,Unit,207,3860 N Tennyson St Unit 207
+S,3128235.0,1705779.0,39.77028519,-105.04381005,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,302,Unit,302,3860 N Tennyson St Unit 302
+S,3128235.0,1705779.0,39.77028519,-105.04381005,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,402,Unit,402,3860 N Tennyson St Unit 402
+S,3128236.0,1705846.0,39.77047088,-105.04380379,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,105,Unit,105,3860 N Tennyson St Unit 105
+S,3128235.0,1705799.0,39.77034026,-105.04380717,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,203,Unit,203,3860 N Tennyson St Unit 203
+S,3128237.0,1705862.0,39.77051278,-105.04379973,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,506,Unit,506,3860 N Tennyson St Unit 506
+S,3128301.0,1705819.0,39.77039395,-105.04357438,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,410,Unit,410,3860 N Tennyson St Unit 410
+S,3128300.0,1705779.0,39.77028575,-105.04357697,None,3860.0,None,None,N,Tennyson,St,None,None,None,None,Unit,412,Unit,412,3860 N Tennyson St Unit 412
+S,3140161.0,1700558.0,39.75578263,-105.00148543,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,1016,Unit,1016,1777 Chestnut Pl Unit 1016
+S,3140133.0,1700574.0,39.75582694,-105.00158488,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,520,Unit,520,1777 Chestnut Pl Unit 520
+S,3140119.0,1700506.0,39.75563886,-105.00163589,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,910,Unit,910,1777 Chestnut Pl Unit 910
+S,3140099.0,1700606.0,39.75591368,-105.00170495,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,824,Unit,824,1777 Chestnut Pl Unit 824
+S,3140053.0,1700652.0,39.75603983,-105.00186753,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,730,Unit,730,1777 Chestnut Pl Unit 730
+S,3140087.0,1700603.0,39.75590731,-105.00174806,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,725,Unit,725,1777 Chestnut Pl Unit 725
+S,3140099.0,1700499.0,39.7556207,-105.00170873,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,703,Unit,703,1777 Chestnut Pl Unit 703
+S,3140103.0,1700489.0,39.7555924,-105.00169488,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,906,Unit,906,1777 Chestnut Pl Unit 906
+S,3139972.0,1700361.0,39.75524471,-105.00216244,None,1707.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,714,Unit,714,1707 Chestnut Pl Unit 714
+S,3139995.0,1700398.0,39.75534588,-105.00208021,None,1707.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,801,Unit,801,1707 Chestnut Pl Unit 801
+S,3140143.0,1700563.0,39.7557953,-105.00155018,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,1118,Unit,1118,1777 Chestnut Pl Unit 1118
+S,3139995.0,1700399.0,39.75534635,-105.00207836,None,1707.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,1001,Unit,1001,1707 Chestnut Pl Unit 1001
+S,3140111.0,1700593.0,39.75587739,-105.00166183,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,722,Unit,722,1777 Chestnut Pl Unit 722
+S,3140035.0,1700669.0,39.7560872,-105.0019313,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,532,Unit,532,1777 Chestnut Pl Unit 532
+S,3139945.0,1700392.0,39.75532757,-105.00225818,None,1707.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,1121,Unit,1121,1707 Chestnut Pl Unit 1121
+S,3127800.0,1679799.0,39.69897072,-105.04581722,None,955.0,None,None,S,Utica,St,None,None,None,None,None,None,None,None,955 S Utica St
+S,3140112.0,1700594.0,39.75588108,-105.00166072,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,1222,Unit,1222,1777 Chestnut Pl Unit 1222
+S,3140029.0,1700433.0,39.75544068,-105.00195727,None,1707.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,1105,Unit,1105,1707 Chestnut Pl Unit 1105
+S,3140113.0,1700578.0,39.75583816,-105.00165547,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,1221,Unit,1221,1777 Chestnut Pl Unit 1221
+S,3140100.0,1700606.0,39.75591406,-105.00170259,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,624,Unit,624,1777 Chestnut Pl Unit 624
+S,3140026.0,1700672.0,39.75609588,-105.00196424,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,1134,Unit,1134,1777 Chestnut Pl Unit 1134
+S,3140092.0,1700477.0,39.75555912,-105.00173445,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,606,Unit,606,1777 Chestnut Pl Unit 606
+S,3140091.0,1700485.0,39.75558221,-105.00173494,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,705,Unit,705,1777 Chestnut Pl Unit 705
+S,3140113.0,1700515.0,39.75566517,-105.00165793,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,1101,Unit,1101,1777 Chestnut Pl Unit 1101
+S,3140101.0,1700486.0,39.75558519,-105.0017003,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,608,Unit,608,1777 Chestnut Pl Unit 608
+S,3140001.0,1700389.0,39.755321,-105.00205878,None,1707.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,610,Unit,610,1707 Chestnut Pl Unit 610
+S,3140053.0,1700652.0,39.75604046,-105.00186772,None,1777.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,530,Unit,530,1777 Chestnut Pl Unit 530
+S,3166599.0,1686384.0,39.71643506,-104.90778249,None,6925.0,None,None,E,Lowry,Blvd,None,None,None,None,None,None,None,None,6925 E Lowry Blvd
+S,3166700.0,1686405.0,39.71649116,-104.90742614,None,6949.0,None,None,E,Lowry,Blvd,None,None,None,None,None,None,None,None,6949 E Lowry Blvd
+S,3166582.0,1686377.0,39.71641782,-104.90784593,None,6919.0,None,None,E,Lowry,Blvd,None,None,None,None,None,None,None,None,6919 E Lowry Blvd
+S,3137621.0,1707460.0,39.77476558,-105.01038564,None,4233.0,None,None,N,Shoshone,St,None,None,None,None,None,None,None,None,4233 N Shoshone St
+S,3173498.0,1715997.0,39.79760169,-104.88254412,None,9100.0,None,None,E,56th,Ave,None,None,None,None,None,None,None,None,9100 E 56th Ave
+S,3137584.0,1707461.0,39.77476858,-105.01051906,None,4225.0,None,None,N,Shoshone,St,None,None,None,None,Gar,1,Gar,1,4225 N Shoshone St Gar 1
+S,3150391.0,1701454.0,39.7580818,-104.96508422,None,1860.0,None,None,E,29th,Ave,None,None,None,None,Unit,2,Unit,2,1860 E 29th Ave Unit 2
+S,3137583.0,1707449.0,39.77473629,-105.01052104,None,4229.0,None,None,N,Shoshone,St,None,None,None,None,Gar,1,Gar,1,4229 N Shoshone St Gar 1
+S,3150405.0,1701454.0,39.75808141,-104.96503376,None,1860.0,None,None,E,29th,Ave,None,None,None,None,Unit,1,Unit,1,1860 E 29th Ave Unit 1
+U,3154451.0,1696219.0,39.74364476,-104.9507546,None,3148.0,None,None,E,17th,Ave,None,None,None,None,Util,2,Util,2,3148 E 17th Ave Util 2
+S,3142201.0,1688224.0,39.72189079,-104.9944725,None,353.0,None,None,N,Elati,St,None,None,None,None,Unit,303,Unit,303,353 N Elati St Unit 303
+S,3131873.0,1696907.0,39.74588116,-105.03103028,None,1826.0,None,None,N,Julian,St,None,None,None,None,None,None,None,None,1826 N Julian St
+S,3131913.0,1696874.0,39.74578983,-105.03088962,None,1828.0,None,None,N,Julian,St,None,None,None,None,Unit,1,Unit,1,1828 N Julian St Unit 1
+S,3142242.0,1688224.0,39.72189018,-104.99432969,None,353.0,None,None,N,Elati,St,None,None,None,None,Unit,301,Unit,301,353 N Elati St Unit 301
+S,3137340.0,1708323.0,39.77713829,-105.01137171,None,4433.0,None,None,N,Tejon,St,None,None,None,None,None,None,None,None,4433 N Tejon St
+U,3133485.0,1713239.0,39.79069154,-105.02499472,None,5194.0,None,None,N,Federal,Blvd,None,None,None,None,None,None,None,None,5194 N Federal Blvd
+S,3145579.0,1702676.0,39.76151199,-104.98217329,None,1316.0,None,None,None,29th,St,None,None,None,None,Unit,101,Unit,101,1316 29th St Unit 101
+S,3131867.0,1696874.0,39.74579048,-105.031052,None,1826.0,None,None,N,Julian,St,None,None,None,None,Unit,1,Unit,1,1826 N Julian St Unit 1
+S,3142242.0,1688224.0,39.72189018,-104.99432969,None,353.0,None,None,N,Elati,St,None,None,None,None,Unit,201,Unit,201,353 N Elati St Unit 201
+S,3131827.0,1696908.0,39.74588284,-105.03119381,None,1824.0,None,None,N,Julian,St,None,None,None,None,None,None,None,None,1824 N Julian St
+S,3155335.0,1705667.0,39.76956608,-104.94740699,None,3812.0,None,None,N,Cook,St,None,None,None,None,None,None,None,None,3812 N Cook St
+S,3143990.0,1698584.0,39.75030344,-104.98790821,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,616,Unit,616,2075 N Broadway Unit 616
+S,3143980.0,1698584.0,39.75030389,-104.98794332,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,621,Unit,621,2075 N Broadway Unit 621
+U,3141478.0,1696809.0,39.74547073,-104.99687564,None,1404.0,None,None,None,Curtis,St,None,None,None,None,None,None,None,None,1404 Curtis St
+U,3143018.0,1700587.0,39.75581612,-104.99132234,None,1445.0,None,None,None,22nd,St,None,None,None,None,None,None,None,None,1445 22nd St
+S,3144062.0,1698667.0,39.75053025,-104.98764823,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,508,Unit,508,2075 N Broadway Unit 508
+S,3144050.0,1698653.0,39.75049374,-104.98769141,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,205,Unit,205,2075 N Broadway Unit 205
+S,3138976.0,1704538.0,39.76672396,-105.00562243,None,1604.0,None,None,W,36th,Ave,None,None,None,None,Unit,2,Unit,2,1604 W 36th Ave Unit 2
+S,3144063.0,1698628.0,39.75042413,-104.98764491,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,604,Unit,604,2075 N Broadway Unit 604
+S,3144032.0,1698637.0,39.75044899,-104.98775718,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,511,Unit,511,2075 N Broadway Unit 511
+S,3144021.0,1698625.0,39.7504173,-104.98779693,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,415,Unit,415,2075 N Broadway Unit 415
+S,3144059.0,1698597.0,39.75033872,-104.98766179,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,301,Unit,301,2075 N Broadway Unit 301
+S,3144067.0,1698571.0,39.7502668,-104.9876341,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,602,Unit,602,2075 N Broadway Unit 602
+S,3144032.0,1698637.0,39.75044994,-104.98775741,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,611,Unit,611,2075 N Broadway Unit 611
+U,3144730.0,1699487.0,39.75277195,-104.9852583,None,842.0,None,None,None,Park,Ave,W,None,None,None,None,None,None,None,842 Park Ave W
+S,3144066.0,1698603.0,39.75035539,-104.98763623,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,300,Unit,300,2075 N Broadway Unit 300
+U,3145102.0,1699083.0,39.75165646,-104.98394135,None,2259.0,None,None,None,California,St,None,None,None,None,None,None,None,None,2259 California St
+S,3144056.0,1698671.0,39.7505425,-104.98767067,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,507,Unit,507,2075 N Broadway Unit 507
+L,3138979.0,1704486.0,39.76658207,-105.00561367,None,3553.0,None,None,N,Osage,St,None,None,None,None,None,None,None,None,3553 N Osage St
+S,3144000.0,1698595.0,39.75033526,-104.98787088,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,414,Unit,414,2075 N Broadway Unit 414
+S,3144063.0,1698680.0,39.75056718,-104.98764599,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,210,Unit,210,2075 N Broadway Unit 210
+S,3144021.0,1698626.0,39.75041746,-104.98779693,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,515,Unit,515,2075 N Broadway Unit 515
+S,3144032.0,1698637.0,39.75044901,-104.98775743,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,411,Unit,411,2075 N Broadway Unit 411
+S,3144063.0,1698643.0,39.75046435,-104.98764578,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,606,Unit,606,2075 N Broadway Unit 606
+S,3144059.0,1698685.0,39.75057938,-104.98765836,None,2075.0,None,None,N,Broadway,None,None,None,None,None,Unit,509,Unit,509,2075 N Broadway Unit 509
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,5044,Unit,5044,1975 19th St Unit 5044
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,3007,Unit,3007,1975 19th St Unit 3007
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,5059,Unit,5059,1975 19th St Unit 5059
+S,3166276.0,1653236.0,39.62544153,-104.90969814,None,4855.0,None,None,S,Niagara,St,None,None,None,None,Unit,123,Unit,123,4855 S Niagara St Unit 123
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,5001,Unit,5001,1975 19th St Unit 5001
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,5037,Unit,5037,1975 19th St Unit 5037
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,5054,Unit,5054,1975 19th St Unit 5054
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,3009,Unit,3009,1975 19th St Unit 3009
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,4039,Unit,4039,1975 19th St Unit 4039
+S,3166277.0,1653278.0,39.62555749,-104.90969403,None,4855.0,None,None,S,Niagara,St,None,None,None,None,Unit,122,Unit,122,4855 S Niagara St Unit 122
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,5005,Unit,5005,1975 19th St Unit 5005
+S,3166230.0,1653475.0,39.62610001,-104.90985514,None,4855.0,None,None,S,Niagara,St,None,None,None,None,Unit,509,Unit,509,4855 S Niagara St Unit 509
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,3017,Unit,3017,1975 19th St Unit 3017
+S,3166208.0,1653303.0,39.62562669,-104.90993921,None,4855.0,None,None,S,Niagara,St,None,None,None,None,Unit,319,Unit,319,4855 S Niagara St Unit 319
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,4021,Unit,4021,1975 19th St Unit 4021
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,5002,Unit,5002,1975 19th St Unit 5002
+S,3140780.0,1700782.0,39.75638652,-104.99927983,None,1975.0,None,None,None,19th,St,None,None,None,None,Unit,4072,Unit,4072,1975 19th St Unit 4072
+S,3158172.0,1673124.0,39.68018084,-104.93802986,None,2000.0,None,None,S,Colorado,Blvd,None,None,Bldg,IV,Unit,1513,Unit,IV-1513,2000 S Colorado Blvd Bldg IV Unit 1513
+S,3158067.0,1673227.0,39.68046623,-104.93840117,None,2000.0,None,None,S,Colorado,Blvd,None,None,Bldg,IV,Unit,313,Unit,IV-313,2000 S Colorado Blvd Bldg IV Unit 313
+S,3158137.0,1673137.0,39.68021618,-104.93815403,None,2000.0,None,None,S,Colorado,Blvd,None,None,Bldg,IV,Unit,1015,Unit,IV-1015,2000 S Colorado Blvd Bldg IV Unit 1015
+S,3158251.0,1673110.0,39.68014023,-104.93775101,None,2000.0,None,None,S,Colorado,Blvd,None,None,Bldg,IV,Unit,1805,Unit,IV-1805,2000 S Colorado Blvd Bldg IV Unit 1805
+L,3157226.0,1686747.0,39.71759501,-104.94109385,None,98.0,None,None,N,Harrison,St,None,None,None,None,None,None,None,None,98 N Harrison St
+S,3158114.0,1673140.0,39.68022609,-104.93823496,None,2000.0,None,None,S,Colorado,Blvd,None,None,Bldg,IV,Unit,1017,Unit,IV-1017,2000 S Colorado Blvd Bldg IV Unit 1017
+S,3158222.0,1673116.0,39.68015738,-104.93785231,None,2000.0,None,None,S,Colorado,Blvd,None,None,Bldg,IV,Unit,2009,Unit,IV-2009,2000 S Colorado Blvd Bldg IV Unit 2009
+S,3145260.0,1699619.0,39.75312632,-104.98337091,None,780.0,None,None,None,24th,St,None,None,None,None,None,None,None,None,780 24th St
+S,3206984.0,1714868.0,39.79381743,-104.7634121,None,5472.0,None,None,N,Danube,St,None,None,None,None,None,None,None,None,5472 N Danube St
+S,3207049.0,1714708.0,39.79337598,-104.76318505,None,5448.0,None,None,N,Danube,St,None,None,None,None,None,None,None,None,5448 N Danube St
+S,3145201.0,1699580.0,39.7530206,-104.98358008,None,2366.0,None,None,None,Stout,St,None,None,None,None,None,None,None,None,2366 Stout St
+S,3205584.0,1715674.0,39.79606119,-104.76837026,None,5513.0,None,None,N,Bahama,St,None,None,None,None,None,None,None,None,5513 N Bahama St
+S,3206985.0,1714578.0,39.7930214,-104.76341676,None,5438.0,None,None,N,Danube,St,None,None,None,None,None,None,None,None,5438 N Danube St
+S,3113610.0,1649801.0,39.61680196,-105.09672022,None,8785.0,None,None,W,Berry,Ave,None,None,None,None,Apt,103,Apt,103,8785 W Berry Ave Apt 103
+S,3113691.0,1650097.0,39.61761482,-105.09642914,None,8761.0,None,None,W,Berry,Ave,None,None,None,None,Apt,203,Apt,203,8761 W Berry Ave Apt 203
+S,3113763.0,1649771.0,39.6167181,-105.09617794,None,8745.0,None,None,W,Berry,Ave,None,None,None,None,Apt,201,Apt,201,8745 W Berry Ave Apt 201
+S,3114087.0,1649832.0,39.6168818,-105.09502501,None,8655.0,None,None,W,Berry,Ave,None,None,None,None,Apt,201,Apt,201,8655 W Berry Ave Apt 201
+S,3206328.0,1714878.0,39.7938583,-104.76574348,None,19130.0,None,None,E,54th,Pl,None,None,None,None,None,None,None,None,19130 E 54th Pl
+S,3205580.0,1715715.0,39.79617369,-104.76838416,None,5519.0,None,None,N,Bahama,St,None,None,None,None,None,None,None,None,5519 N Bahama St
+S,3140147.0,1700321.0,39.75513025,-105.00153948,None,1770.0,None,None,None,Chestnut,Pl,None,None,None,None,Unit,1305,Unit,1305,1770 Chestnut Pl Unit 1305
+S,3145216.0,1699592.0,39.75305253,-104.98352505,None,2376.0,None,None,None,Stout,St,None,None,None,None,None,None,None,None,2376 Stout St
+S,3130779.0,1683607.0,39.70938283,-105.03516434,None,3600.0,None,None,None,Morrison,Rd,None,None,None,None,None,None,None,None,3600 Morrison Rd
+S,3207049.0,1714591.0,39.79305571,-104.76318657,None,5440.0,None,None,N,Danube,St,None,None,None,None,None,None,None,None,5440 N Danube St
+S,3207047.0,1714974.0,39.79410554,-104.76318356,None,5490.0,None,None,N,Danube,St,None,None,None,None,None,None,None,None,5490 N Danube St
+S,3206880.0,1714558.0,39.79296903,-104.76379143,None,5437.0,None,None,N,Danube,St,None,None,None,None,None,None,None,None,5437 N Danube St
+S,3205579.0,1715755.0,39.79628224,-104.7683847,None,5523.0,None,None,N,Bahama,St,None,None,None,None,None,None,None,None,5523 N Bahama St
+S,3206071.0,1715061.0,39.79436632,-104.76665493,None,19060.0,None,None,E,54th,Pl,None,None,None,None,None,None,None,None,19060 E 54th Pl
+S,3206984.0,1714634.0,39.79317583,-104.76341699,None,5444.0,None,None,N,Danube,St,None,None,None,None,None,None,None,None,5444 N Danube St
+S,3206305.0,1714895.0,39.79390603,-104.76582727,None,19128.0,None,None,E,54th,Pl,None,None,None,None,None,None,None,None,19128 E 54th Pl
+S,3205647.0,1715485.0,39.79554039,-104.76815123,None,5473.0,None,None,N,Bahama,St,None,None,None,None,None,None,None,None,5473 N Bahama St
+S,3205630.0,1715527.0,39.79565705,-104.76821032,None,5483.0,None,None,N,Bahama,St,None,None,None,None,None,None,None,None,5483 N Bahama St
+S,3158281.0,1673104.0,39.68012291,-104.93764553,None,2000.0,None,None,S,Colorado,Blvd,None,None,Bldg,IV,Unit,2103,Unit,IV-2103,2000 S Colorado Blvd Bldg IV Unit 2103
+S,3158233.0,1673114.0,39.68015141,-104.93781429,None,2000.0,None,None,S,Colorado,Blvd,None,None,Bldg,IV,Unit,1007,Unit,IV-1007,2000 S Colorado Blvd Bldg IV Unit 1007
+L,3147625.0,1704633.0,39.76685304,-104.97485518,None,3455.0,None,None,None,Larimer,St,None,None,None,None,None,None,None,None,3455 Larimer St
+L,3144594.0,1701350.0,39.7578887,-104.98570273,None,2528.0,None,None,None,Larimer,St,None,None,None,None,None,None,None,None,2528 Larimer St
+S,3157078.0,1689189.0,39.72430003,-104.94156735,None,503.0,None,None,N,Harrison,St,None,None,None,None,None,None,None,None,503 N Harrison St
+S,3141740.0,1686730.0,39.71779658,-104.99614196,None,70.0,None,None,N,Galapago,St,None,None,None,None,Unit,102,Unit,102,70 N Galapago St Unit 102
+L,3131308.0,1694730.0,39.73991159,-105.03307939,None,1476.0,None,None,N,King,St,None,None,None,None,None,None,None,None,1476 N King St
+S,3141769.0,1686730.0,39.71779643,-104.99604013,None,70.0,None,None,N,Galapago,St,None,None,None,None,Unit,104,Unit,104,70 N Galapago St Unit 104
+S,3141755.0,1686730.0,39.71779607,-104.99609049,None,70.0,None,None,N,Galapago,St,None,None,None,None,Unit,103,Unit,103,70 N Galapago St Unit 103
+L,3146232.0,1699563.0,39.75295573,-104.97991361,None,2510.0,None,None,None,Welton,St,None,None,None,None,None,None,None,None,2510 Welton St
+S,3144877.0,1701722.0,39.75890321,-104.98468853,None,2626.0,None,None,None,Larimer,St,None,None,None,None,None,None,None,None,2626 Larimer St
+S,3141801.0,1686730.0,39.71779651,-104.99592534,None,70.0,None,None,N,Galapago,St,None,None,None,None,Unit,107,Unit,107,70 N Galapago St Unit 107
+S,3131706.0,1695100.0,39.74092165,-105.031659,None,1515.0,None,None,N,Julian,St,None,None,None,None,Ste,106,Ste,106,1515 N Julian St Ste 106
+L,3149186.0,1704314.0,39.76595182,-104.96930895,None,3506.0,None,None,N,Humboldt,St,None,None,None,None,None,None,None,None,3506 N Humboldt St
+S,3149840.0,1705332.0,39.76873607,-104.96696187,None,3724.0,None,None,N,Gilpin,St,None,None,None,None,None,None,None,None,3724 N Gilpin St
+S,3147466.0,1701088.0,39.75712337,-104.97549353,None,2915.0,None,None,None,Welton,St,None,None,None,None,None,None,None,None,2915 Welton St
+S,3153003.0,1694898.0,39.74004046,-104.95593285,None,2608.0,None,None,E,Colfax,Ave,None,None,None,None,None,None,None,None,2608 E Colfax Ave
+S,3131704.0,1695179.0,39.741139,-105.03166347,None,1515.0,None,None,N,Julian,St,None,None,None,None,Ste,100,Ste,100,1515 N Julian St Ste 100
+L,3156161.0,1708831.0,39.77823715,-104.9443995,None,4433.0,None,None,N,Garfield,St,None,None,None,None,None,None,None,None,4433 N Garfield St
+S,3147172.0,1700578.0,39.7557279,-104.97655049,None,2800.0,None,None,None,Welton,St,None,None,None,None,None,None,None,None,2800 Welton St
+L,3169051.0,1706416.0,39.77138369,-104.89859678,None,7755.0,None,None,E,Smith,Rd,None,None,None,None,None,None,None,None,7755 E Smith Rd
+L,3146689.0,1707392.0,39.77444109,-104.97812829,None,3748.0,None,None,None,Arkins,Ct,None,None,None,None,None,None,None,None,3748 Arkins Ct
+L,3150337.0,1702614.0,39.7612676,-104.96524946,None,3123.0,None,None,N,High,St,None,None,None,None,None,None,None,None,3123 N High St
+L,3150527.0,1710852.0,39.78387887,-104.96440025,None,4800.0,None,None,N,High,St,None,None,None,None,None,None,None,None,4800 N High St
+L,3149552.0,1702697.0,39.76150703,-104.96804071,None,3136.0,None,None,N,Franklin,St,None,None,None,None,None,None,None,None,3136 N Franklin St
+S,3143618.0,1670155.0,39.67226692,-104.98979785,None,2442.0,None,None,S,Bannock,St,None,None,None,None,None,None,None,None,2442 S Bannock St
+S,3147189.0,1700596.0,39.75577612,-104.97648996,None,2804.0,None,None,None,Welton,St,None,None,None,None,None,None,None,None,2804 Welton St
+L,3146731.0,1707473.0,39.77466304,-104.97797658,None,2060.0,None,None,None,38th,St,None,None,None,None,None,None,None,None,2060 38th St
+U,3170525.0,1687561.0,39.71959575,-104.89380034,None,7746.0,None,None,E,Academy,Pl,None,None,None,None,None,None,None,None,7746 E Academy Pl
+S,3150245.0,1673843.0,39.68228553,-104.96618055,None,1894.0,None,None,S,Williams,St,None,None,None,None,None,None,None,None,1894 S Williams St
+S,3150242.0,1673830.0,39.68224911,-104.96618916,None,1896.0,None,None,S,Williams,St,None,None,None,None,None,None,None,None,1896 S Williams St
+S,3150243.0,1673869.0,39.68235777,-104.9661871,None,1890.0,None,None,S,Williams,St,None,None,None,None,None,None,None,None,1890 S Williams St
+S,3150242.0,1673863.0,39.6823399,-104.96618847,None,1892.0,None,None,S,Williams,St,None,None,None,None,None,None,None,None,1892 S Williams St
+L,3143315.0,1697107.0,39.74626023,-104.9903365,None,1720.0,None,None,None,California,St,None,None,None,None,None,None,None,None,1720 California St
+S,3134653.0,1699664.0,39.7534085,-105.02109109,None,2704.0,None,None,W,25th,Ave,None,None,None,None,None,None,None,None,2704 W 25th Ave
+L,3154598.0,1687098.0,39.71860167,-104.9504298,None,142.0,None,None,N,Saint Paul,St,None,None,None,None,None,None,None,None,142 N Saint Paul St
+L,3143171.0,1697203.0,39.74652592,-104.9908463,None,1711.0,None,None,None,California,St,None,None,None,None,None,None,None,None,1711 California St
+U,3165124.0,1684428.0,39.71109258,-104.91307362,None,301.0,None,None,S,Monaco Street,Pkwy,None,None,None,None,None,None,None,None,301 S Monaco Street Pkwy
+U,3165124.0,1684428.0,39.71109258,-104.91307362,None,3201.0,None,None,N,Monaco Street,Pkwy,None,None,None,None,None,None,None,None,3201 N Monaco Street Pkwy
+S,3134654.0,1699582.0,39.75318445,-105.02108985,None,2714.0,None,None,W,25th,Ave,None,None,None,None,None,None,None,None,2714 W 25th Ave
+U,3183577.0,1710437.0,39.7821447,-104.84681949,None,4696.0,None,None,N,Peoria,St,None,None,None,None,None,None,None,None,4696 N Peoria St
+S,3169719.0,1675018.0,39.68517681,-104.89696334,None,1699.0,None,None,S,Trenton,St,None,None,None,None,Unit,2,Unit,2,1699 S Trenton St Unit 2
+S,3169541.0,1675011.0,39.68516162,-104.89759472,None,1699.0,None,None,S,Trenton,St,None,None,None,None,Unit,17,Unit,17,1699 S Trenton St Unit 17
+S,3169288.0,1674608.0,39.68405919,-104.89850375,None,1699.0,None,None,S,Trenton,St,None,None,None,None,Unit,173,Unit,173,1699 S Trenton St Unit 173

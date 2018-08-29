@@ -68,19 +68,16 @@ class Node
     if @children.size == 0 && @word == nil
       @parent.children.delete(@value)
       @parent.trim
-      #TODO garbage collection?
     end
   end
 
-  def descendant_nodes_by_value(char, depth)
+  def descendant_nodes_by_value(char)
     nodes = []
-    if depth > 0
-      @children.each do |child_char, child_node|
-        if child_char == char
-          nodes << child_node
-        end
-        nodes += child_node.descendant_nodes_by_value(char, depth - 1)
+    @children.each do |child_char, child_node|
+      if child_char == char
+        nodes << child_node
       end
+      nodes += child_node.descendant_nodes_by_value(char)
     end
     return nodes
   end
