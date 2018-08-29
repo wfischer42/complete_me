@@ -4,15 +4,18 @@ SimpleCov.start
 # require 'test/test_helper'
 require 'minitest/autorun'
 require 'minitest/pride'
+require './lib/complete_me'
 require './lib/trie'
 require './lib/node'
 
 class TrieTest < Minitest::Test
 
   def setup
-    @trie = Trie.new
-    dictionary = File.read('./data/dictionary_tiny_sample')
-    @trie.populate(dictionary)
+    # Use "CompleteMe" to setup a populated trie
+    @completion = CompleteMe.new
+    @completion.populate("./data/dictionary_tiny_sample")
+
+    @trie = @completion.tries["words"]
   end
 
   def test_it_exists
@@ -144,30 +147,4 @@ class TrieTest < Minitest::Test
     suggestion = @trie.suggest("Blvd")
     assert_equal "555 N Broadway Blvd", suggestion[0]
   end
-
-  ########### Tests that load dictionary #############
-
-  def test_can_populate_from_full_dictionary_and_suggest_words
-    trie = Trie.new
-    dictionary = File.read("/usr/share/dict/words")
-    trie.populate(dictionary)
-    assert_equal 235886, trie.count
-
-    suggestion = trie.suggest("piz")
-    assert suggestion.include?("pizza")
-    assert suggestion.include?("papize")
-    assert suggestion.include?("epizoic")
-  end
-
-  ########### Tests that load address list #############
-
-  def test_can_populate_from_address_list_and_suggest_adresses
-    address_trie = Trie.new
-    address_trie.populate_addresses("./data/addresses.csv")
-    assert_equal 313415, address_trie.count
-
-    suggestion = address_trie.suggest("1350 N")
-    assert suggestion.include?("1350 N Speer Blvd Unit 422")
-  end
-
 end

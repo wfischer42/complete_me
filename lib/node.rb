@@ -1,7 +1,6 @@
 class Node
 
-  attr_accessor   :word,
-                  :weights
+  attr_accessor   :word
   attr_reader     :value,
                   :children,
                   :parent
@@ -10,7 +9,6 @@ class Node
     @value = value
     @word = nil
     @children = {}
-    @weights = Hash.new(0)
     @parent = parent
   end
 
@@ -40,27 +38,23 @@ class Node
   # Takes in the snippit
   # Returns a hash of all words that descend from that node and their respective weights for the snippit
   def descendant_words(snippit = "")
-    words = {}
-    if @word != nil && @word != snippit
-      words[@word] = @weights[snippit]
+    child_nodes = children.values
+    words = child_nodes.inject([]) do |words, child|
+      # require 'pry'; binding.pry
+      words += child.descendant_words(snippit)
     end
-    children.each do |char, child|
-      if child.word != nil
-        words[child.word] = child.weights[snippit]
-      end
-      d_words = child.descendant_words(snippit)
-      words.merge!(d_words)
+    if @word != nil && @word != snippit
+      words << @word
     end
     return words
   end
-
-  def add_weight(snippit)
-      @weights[snippit] += 1
-  end
+  #
+  # def add_weight(snippit)
+  #     @weights[snippit] += 1
+  # end
 
   def remove_word
     @word = nil
-    @weights = Hash.new(0)
     trim
   end
 
