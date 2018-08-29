@@ -7,25 +7,26 @@ require './lib/importer'
 require './lib/csv_adapter'
 require './lib/text_adapter'
 
-class BadAdapter
-  def array_of_strings
-    return "This output is invalid!"
-  end
-end
-
 class ImporterTest < Minitest::Test
 
   def setup
     csv_file = './data/addresses_tiny_sample.csv'
-    column = "FULL_ADDRESS"
-    @csv_importer = Importer.new(csv_file, :csv, column)
+    header = "FULL_ADDRESS"
+    @csv_importer = Importer.new(csv_file, csv_header: header)
 
     text_file = './data/dictionary_tiny_sample'
-    @text_importer = Importer.new(text_file, :text)
+    @text_importer = Importer.new(text_file)
+
+    @default_importer = Importer.new
   end
 
   def test_it_exists
     assert_instance_of Importer, @text_importer
+  end
+
+  def test_it_loads_dictionary_by_default
+    assert_instance_of TextAdapter, @default_importer.adapter
+    assert_equal '/usr/share/dict/words', @default_importer.adapter.filename
   end
 
   def test_it_has_correct_adapters
@@ -39,7 +40,7 @@ class ImporterTest < Minitest::Test
   end
 
   def test_gracefully_fails_with_invalid_adapter
-    @text_importer.adapter = "This isnt an adapter!"
+    @text_importer.adapter = "This isnt a valid adapter!"
     assert_nil @text_importer.words
   end
 
@@ -61,11 +62,5 @@ class ImporterTest < Minitest::Test
     refute @text_importer.words_valid?(list_1)
     refute @text_importer.words_valid?(list_2)
     refute @text_importer.words_valid?(list_3)
-  end
-
-  def test_it_gracefully_fails_with_bad_adapter_output
-    @text_importer.adapter = BadAdapter.new
-    words = @text_importer.words
-    assert_nil words
   end
 end

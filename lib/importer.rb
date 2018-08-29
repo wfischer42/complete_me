@@ -4,11 +4,11 @@ require './lib/csv_adapter'
 class Importer
   attr_accessor :adapter
 
-  def initialize(file_name, adapter_type, *args)
-    if adapter_type == :text
-        @adapter = TextAdapter.new(file_name)
-    elsif adapter_type == :csv && args.length == 1
-        @adapter = CSVAdapter.new(file_name, args[0])
+  def initialize(filename = '/usr/share/dict/words', csv_header: nil)
+    if !csv_header
+        @adapter = TextAdapter.new(filename)
+    else
+        @adapter = CSVAdapter.new(filename, csv_header)
     end
   end
 
