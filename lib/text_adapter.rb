@@ -1,11 +1,11 @@
 class TextAdapter
-
-  def initialize(file_name)
-    @file_name = file_name
+  attr_accessor :filename
+  def initialize(filename)
+    @filename = filename
   end
 
   def array_of_strings
-    dictionary = File.read(@file_name)
+    dictionary = File.read(@filename)
     dictionary.split("\n")
   end
 
