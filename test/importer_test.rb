@@ -17,12 +17,11 @@ class ImporterTest < Minitest::Test
 
   def setup
     csv_file = './data/addresses_tiny_sample.csv'
-    csv_adapter = CSVAdapter.new(csv_file, 'FULL_ADDRESS')
-    @csv_importer = Importer.new(csv_adapter)
+    column = "FULL_ADDRESS"
+    @csv_importer = Importer.new(csv_file, :csv, column)
 
     text_file = './data/dictionary_tiny_sample'
-    text_adapter = TextAdapter.new(text_file)
-    @text_importer = Importer.new(text_adapter)
+    @text_importer = Importer.new(text_file, :text)
   end
 
   def test_it_exists

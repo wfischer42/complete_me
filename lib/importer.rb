@@ -4,8 +4,12 @@ require './lib/csv_adapter'
 class Importer
   attr_accessor :adapter
 
-  def initialize(adapter)
-    @adapter = adapter
+  def initialize(file_name, adapter_type, *args)
+    if adapter_type == :text
+        @adapter = TextAdapter.new(file_name)
+    elsif adapter_type == :csv && args.length == 1
+        @adapter = CSVAdapter.new(file_name, args[0])
+    end
   end
 
   def adapter_valid?
