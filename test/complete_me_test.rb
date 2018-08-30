@@ -1,7 +1,6 @@
 require 'simplecov'
 SimpleCov.start
 
-# require 'test/test_helper'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/complete_me'
@@ -123,5 +122,42 @@ class CompleteMeTest < Minitest::Test
 
     assert lexicon.include?("pizzeria")
     assert lexicon.include?("student")
+  end
+
+  def test_it_can_remove_words
+    @completion.populate("./data/dictionary_tiny_sample")
+    assert @completion.include?("pizza")
+    assert_equal 13, @completion.count
+
+    @completion.delete("pizza")
+    assert_equal ["pizza"], @completion.deleted
+
+    assert_equal 12, @completion.count
+    refute @completion.include?("pizza")
+  end
+
+  def test_it_can_remove_deleted_words_from_lists
+    words = ["pizza", "pizzeria", "piaza", "etc"]
+    @completion.delete("pizza")
+
+    words = @completion.filter_deletions(words)
+    assert_equal ["pizzeria", "piaza", "etc"], words
+  end
+
+  def test_it_can_reset_deleted_words
+    words = ["pizza", "pizzeria", "piaza", "etc"]
+    @completion.delete("pizza")
+    @completion.reset_deletions
+
+    assert_equal [], @completion.deleted
+    assert_equal words, @completion.filter_deletions(words)
+  end
+
+  def test_it_can_use_large_datasets
+    @completion.default = "addresses"
+    file = "./data/addresses.csv"
+    header = "FULL_ADDRESS"
+    @completion.populate(file, csv_header: header, trie_name: "addresses")
+    assert_equal 313415, @completion.count
   end
 end

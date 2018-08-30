@@ -65,9 +65,9 @@ class Trie
   end
 
   # TODO: Move to complete_me
-  def select(snippit, word)
-    node = last_node_of_snippit(word)
-  end
+  # def select(snippit, word)
+  #   node = last_node_of_snippit(word)
+  # end
 
   # TODO: Move to CompleteMe.
   # TODO: Test to make sure deletion of only word doesn't destroy root node

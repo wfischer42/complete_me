@@ -24,9 +24,6 @@ class Importer
   def words
     if adapter_valid?
       get_valid_words
-    else
-      p "Adapter is invalid"
-      return nil
     end
   end
 
@@ -34,9 +31,6 @@ class Importer
     word_list = @adapter.array_of_strings
     if words_valid?(word_list)
       return word_list
-    else
-      p "Error: #{word_list}"
-      return nil
     end
   end
 
