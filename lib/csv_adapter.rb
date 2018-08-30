@@ -14,4 +14,5 @@ class CSVAdapter
     end
     return strings
   end
+  
 end

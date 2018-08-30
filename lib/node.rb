@@ -1,5 +1,4 @@
 class Node
-
   attr_accessor   :word
   attr_reader     :value,
                   :children,
@@ -51,7 +50,7 @@ class Node
   end
 
   def trim
-    if @value && @children.size == 0 && @word == nil 
+    if @value && @children.size == 0 && @word == nil
       @parent.children.delete(@value)
       @parent.trim
     end
@@ -67,4 +66,5 @@ class Node
     end
     return nodes
   end
+  
 end

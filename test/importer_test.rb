@@ -70,4 +70,5 @@ class ImporterTest < Minitest::Test
     refute @text_importer.words_valid?(list_3)
     refute @text_importer.words_valid?(list)
   end
+  
 end

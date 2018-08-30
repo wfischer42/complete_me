@@ -1,5 +1,3 @@
-require 'pry'
-require 'csv' #TODO: Remove dependence
 require './lib/node'
 
 class Trie
@@ -10,7 +8,6 @@ class Trie
 
   def insert(word)
     node = @root
-    # word = normalize(word)
     word.chars.each do |char|
       child = node.add_child(char)
       node = child
@@ -34,7 +31,6 @@ class Trie
     @root.count
   end
 
-  # TODO: break into 2 methods
   def suggest(snippit)
     first_char = snippit[0]
     remaining_snippit = snippit.slice(1..-1)
@@ -64,15 +60,8 @@ class Trie
     @root.descendant_nodes_by_value(char)
   end
 
-  # TODO: Move to complete_me
-  # def select(snippit, word)
-  #   node = last_node_of_snippit(word)
-  # end
-
-  # TODO: Move to CompleteMe.
-  # TODO: Test to make sure deletion of only word doesn't destroy root node
   def delete(word)
     last_node_of_snippit(word).remove_word
   end
-
+  
 end

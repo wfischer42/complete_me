@@ -37,4 +37,5 @@ class TextAdapterTest < Minitest::Test
 
     assert_equal expected, strings[0..4]
   end
+  
 end
