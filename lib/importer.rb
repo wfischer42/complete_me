@@ -41,4 +41,5 @@ class Importer
       word.class == String
     end
   end
+  
 end

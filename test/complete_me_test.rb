@@ -160,4 +160,5 @@ class CompleteMeTest < Minitest::Test
     @completion.populate(file, csv_header: header, trie_name: "addresses")
     assert_equal 313415, @completion.count
   end
+  
 end

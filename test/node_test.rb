@@ -36,8 +36,5 @@ class NodeTest < Minitest::Test
     node_2 = node_1.add_child("b")
     assert_equal node_1, node_2.parent
   end
-
-  def test_case_name
-
-  end
+  
 end
