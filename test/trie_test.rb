@@ -117,34 +117,10 @@ class TrieTest < Minitest::Test
     assert suggestion.include?("pokemon")
   end
 
-  def test_can_weight_words_based_on_selction
-    @trie.select("piz", "pizzeria")
-    suggestion = @trie.suggest("piz")
-    assert_equal "pizzeria", suggestion[0]
-  end
-
-  def test_weights_are_independant
-    @trie.select("piz", "pizzeria")
-    @trie.select("pi", "pize")
-    @trie.select("pizz", "pizza")
-    suggestion_1 = @trie.suggest("piz")
-    suggestion_2 = @trie.suggest("pi")
-    suggestion_3 = @trie.suggest("pizz")
-    assert_equal "pizzeria", suggestion_1[0]
-    assert_equal "pize", suggestion_2[0]
-    assert_equal "pizza", suggestion_3[0]
-  end
 
   def test_can_suggest_addresses
     suggestion = @trie.suggest("Blvd")
     assert suggestion.include?("555 N Broadway Blvd")
   end
 
-  def test_cand_weight_addresses_based_on_selection
-    suggestion = @trie.suggest("Blvd")
-    refute_equal "555 N Broadway Blvd", suggestion[0]
-    @trie.select("Blvd", "555 N Broadway Blvd")
-    suggestion = @trie.suggest("Blvd")
-    assert_equal "555 N Broadway Blvd", suggestion[0]
-  end
 end
