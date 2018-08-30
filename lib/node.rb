@@ -34,13 +34,9 @@ class Node
     return node_count
   end
 
-  # Called -on- the last node of the 'snippit'
-  # Takes in the snippit
-  # Returns a hash of all words that descend from that node and their respective weights for the snippit
   def descendant_words(snippit = "")
     child_nodes = children.values
     words = child_nodes.inject([]) do |words, child|
-      # require 'pry'; binding.pry
       words += child.descendant_words(snippit)
     end
     if @word != nil && @word != snippit
@@ -48,10 +44,6 @@ class Node
     end
     return words
   end
-  #
-  # def add_weight(snippit)
-  #     @weights[snippit] += 1
-  # end
 
   def remove_word
     @word = nil
@@ -59,7 +51,7 @@ class Node
   end
 
   def trim
-    if @children.size == 0 && @word == nil
+    if @value && @children.size == 0 && @word == nil 
       @parent.children.delete(@value)
       @parent.trim
     end

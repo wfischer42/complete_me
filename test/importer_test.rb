@@ -44,6 +44,11 @@ class ImporterTest < Minitest::Test
     assert_nil @text_importer.words
   end
 
+  def test_gracefully_fails_with_invalid_adapter_output
+    @text_importer.adapter = "This isnt a valid adapter!"
+    assert_nil @text_importer.words
+  end
+
   def test_gets_valid_words
     assert @text_importer.words
     assert @csv_importer.words
@@ -58,9 +63,11 @@ class ImporterTest < Minitest::Test
     list_1 = {a: 2}
     list_2 = "Hello"
     list_3 = 15
+    list = [list_1, list_2, list_3]
 
     refute @text_importer.words_valid?(list_1)
     refute @text_importer.words_valid?(list_2)
     refute @text_importer.words_valid?(list_3)
+    refute @text_importer.words_valid?(list)
   end
 end

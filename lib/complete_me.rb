@@ -4,13 +4,14 @@ require './lib/importer'
 class CompleteMe
   attr_reader :tries,
               :default,
-              :weight_list
+              :weight_list,
+              :deleted
 
   def initialize(default = "words")
-
     @default = default
     @tries = {"words" => Trie.new, "addresses" => Trie.new}
     @weight_list = Hash.new(0)
+    @deleted = []
   end
 
   def add_trie(new_trie)
@@ -41,6 +42,8 @@ class CompleteMe
   end
 
   def include?(word, trie_name: @default)
+    return false if deleted.include?(word)
+
     if @tries[trie_name]
       @tries[trie_name].include?(word)
     else
@@ -49,20 +52,20 @@ class CompleteMe
   end
 
   def count(trie_name: @default)
-    if @tries[trie_name]
-      @tries[trie_name].count
-    end
+    lexicon(trie_name: trie_name).size
   end
 
   def lexicon(trie_name: @default)
     if @tries[trie_name]
-      @tries[trie_name].lexicon
+      words = @tries[trie_name].lexicon
+      words = filter_deletions(words)
     end
   end
 
   def suggest(snippit, trie_name: @default)
     if @tries[trie_name]
       suggestions = @tries[trie_name].suggest(snippit)
+      suggestions = filter_deletions(suggestions)
       sort_suggestions(snippit, suggestions)
     end
   end
@@ -77,6 +80,23 @@ class CompleteMe
       key = [snippit, suggestion]
       @weight_list[key] * -1
     end
+  end
+
+  # Deletions are handled outside the trie object so they can be rolled
+  # back easily, and eventually scaled for multiple users
+  def delete(word)
+    @deleted << word
+  end
+
+  def filter_deletions(words)
+    @deleted.each do |word|
+      words.delete(word)
+    end
+    return words
+  end
+
+  def reset_deletions
+    @deleted = []
   end
 
 end
